@@ -48,7 +48,7 @@ export default {
         .then(data => {
           this.radios = data.map(station => ({
             ...station,
-            favicon: station.favicon || 'radio/img/radio.jpg' // Aggiungi un'immagine predefinita per le stazioni senza favicon
+            favicon: station.favicon || 'default-image.jpg' // Aggiungi un'immagine predefinita per le stazioni senza favicon
           }));
         })
         .catch(error => {
@@ -106,7 +106,7 @@ export default {
   },
   created() {
     this.getRadios();
-  },
+},
 }
 </script>
 
@@ -116,14 +116,11 @@ export default {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: red;
-  /* Cambio colore di sfondo */
-  color: #fff;
-  /* Cambio colore del testo */
+  background-color: red; /* Cambio colore di sfondo */
+  color: #fff; /* Cambio colore del testo */
   text-align: center;
   padding: 20px 0;
 }
-
 .footer p {
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -136,18 +133,13 @@ export default {
 
 /* Aggiungiamo uno stile personalizzato alle card */
 .custom-card {
-  background-color: #fff;
-  /* Sfondo delle card */
-  border-radius: 10px;
-  /* Bordi arrotondati */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Ombra */
-  cursor: pointer;
-  /* Cambio del cursore al passaggio sopra la card */
+  background-color: #fff; /* Sfondo delle card */
+  border-radius: 10px; /* Bordi arrotondati */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombra */
+  cursor: pointer; /* Cambio del cursore al passaggio sopra la card */
 }
 
 .custom-card:hover {
   transform: translateY(-2px);
-  /* Effetto di sollevamento al passaggio del mouse */
 }
 </style>

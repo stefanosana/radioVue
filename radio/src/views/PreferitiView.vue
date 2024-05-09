@@ -1,5 +1,6 @@
 <template>
     <v-container>
-        <h1>Preferiti</h1>
+       <h1>preferiti</h1>
     </v-container>
+
 </template>

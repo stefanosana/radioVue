@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "music-metadata-browser": "^2.5.10",
+    "three": "^0.164.1",
     "vue": "^3.2.13",
     "vue-hls-video-player": "^1.0.1",
     "vue-router": "^4.0.3",
@@ -18,6 +19,8 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@mdi/font": "^7.4.47",
+    "@types/three": "^0.164.0",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",

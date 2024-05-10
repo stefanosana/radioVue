@@ -2,8 +2,8 @@
   <div id="app">
     <nav>
       <router-link to="/">HOME</router-link> |
-      <router-link to="/preferiti">Preferiti</router-link> |
-      <router-link to="/mappamondo">Mappamondo</router-link> 
+      <router-link to="/preferiti">PREFERITI</router-link> |
+      <router-link to="/mappamondo">GEOMAP</router-link> 
     </nav>
     <router-view :current-radio-name="currentRadioName"/>
     <v-layout>

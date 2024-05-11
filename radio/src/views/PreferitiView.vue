@@ -21,14 +21,6 @@
             </v-row>
         </v-container>
 
-        <!-- Sezione delle radio italiane -->
-        <!-- Rimane lo stesso come già definito nel template -->
-
-        <!-- Video Player HLS -->
-        <!-- Rimane lo stesso come già definito nel template -->
-
-        <!-- Footer -->
-        <!-- Rimane lo stesso come già definito nel template -->
     </div>
 </template>
 

@@ -6,8 +6,8 @@
             <v-row>
                 <v-col v-for="favRadio in favoriteRadios" :key="favRadio.id" cols="12" sm="6" md="4">
                     <v-card class="mb-3 custom-card">
-                        <v-img v-if="favRadio.favicon" :src="favRadio.favicon" height="200" contain></v-img>
-                        <v-img v-else src="radio/src/views/img/radio.jpg" height="200" contain></v-img>
+                        <v-img v-if="radio.favicon != null" :src="radio.favicon" height="200"  style="border-radius: 10px 10px 0 0;"></v-img>
+                        <v-img v-else :src="defaultImage" height="200" style="border-radius: 10px 10px 0 0;"></v-img>
 
                         <!-- Bottone rimuovi dai preferiti -->
                         <v-btn icon @click="toggleFavorite(favRadio)" color="red" style="margin-right: 5px;">
@@ -26,6 +26,7 @@
 
 <script>
 import Hls from 'hls.js';
+import defaultImage from '/public/radio.jpg';
 
 export default {
     name: 'HomeView',

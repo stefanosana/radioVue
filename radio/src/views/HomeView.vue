@@ -5,16 +5,14 @@
       <v-row>
         <v-col v-for="radio in radios" :key="radio.id" cols="12" sm="6" md="4">
           <v-card class="mb-3 custom-card" @click="togglePlay(radio)">
-            <v-img v-if="radio.favicon" :src="radio.favicon" height="200" contain></v-img>
-            <v-img v-else src="radio.src/views/img/radio.jpg" height="200" contain></v-img>
-
+            <v-img v-if="radio.favicon != null" :src="radio.favicon" height="200" style="border-radius: 10px 10px 0 0;"></v-img>
+            <v-img v-else :src="defaultImage" height="200" style="border-radius: 10px 10px 0 0;"></v-img>
             <!--Bottone preferiti-->
             <v-btn icon @click="toggleFavorite(radio)" :color="this.isFavorite(radio) ? 'red' : ''"
               style="margin-right: 5px;">
               <v-icon v-if="this.isFavorite(radio)" :color="radio.isPlaying ? 'white' : ''">mdi-heart</v-icon>
               <v-icon v-else>mdi-heart-outline</v-icon>
             </v-btn>
-
 
             <v-card-title style="font-family: Arial, Helvetica, sans-serif">{{ radio.name }}</v-card-title>
           </v-card>
@@ -29,7 +27,6 @@
     <footer class="footer">
       <div class="container">
         <p style="font-family: Arial, Helvetica, sans-serif">Radio in riproduzione: {{ currentRadioName }}</p>
-        <p style="font-family: Arial, Helvetica, sans-serif">Titolo della canzone: {{ currentSongTitle }}</p>
       </div>
     </footer>
   </div>
@@ -37,6 +34,7 @@
 
 <script>
 import Hls from 'hls.js';
+import defaultImage from '/public/radio.jpg';
 
 export default {
   name: 'HomeView',
@@ -58,7 +56,7 @@ export default {
         .then(data => {
           this.radios = data.map(station => ({
             ...station,
-            favicon: station.favicon || 'radio/img/radio.jpg' // Aggiungi un'immagine predefinita per le stazioni senza favicon
+            favicon: station.favicon || defaultImage // Aggiungi un'immagine predefinita per le stazioni senza favicon
           }));
         })
         .catch(error => {

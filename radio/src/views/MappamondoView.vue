@@ -19,6 +19,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import Hls from 'hls.js';
+import defaultImage from '/public/radio.jpg';
 
 export default {
   name: 'ThreeJsScene', // Nome del componente Vue.js
